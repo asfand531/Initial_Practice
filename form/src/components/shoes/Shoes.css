@@ -1,0 +1,13 @@
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 50px 0;
+  background-color: #b3dfef;
+}
+
+.add {
+  font-size: large;
+  display: flex;
+  justify-content: end;
+}

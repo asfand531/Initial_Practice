@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+  text-transform: uppercase;
+  width: 100%;
+  z-index: 1000;
+}
+
+.card-container {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.card {
+  width: 500px;
+  margin: 10px 5px;
+}
+
+.ks-card {
+  width: 300px;
+  margin: 10px 5px;
+}
+
+.add-bag-btn {
+  text-transform: uppercase;
+  margin-top: 25px;
+}
+
+.size-container {
+  display: flex;
+  margin-top: 25px;
+}
+
+.circle {
+  text-transform: uppercase;
+  padding: 3px;
+  margin: 3px;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  font-size: small;
+  text-align: center;
+}
+
+.ori-price {
+  text-decoration: line-through;
+  color: gray;
+  font-size: 0.9em;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.filter-sidebar {
+  width: 300px;
+  background-color: white;
+  color: black;
+  padding: 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+.ks-container {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 20px;
+  text-transform: uppercase;
+}
+
+.product-page {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.product-image-section {
+  flex: 1;
+}
+
+.main-image {
+  width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.thumbnail-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.thumbnail {
+  width: 80px;
+  height: 80px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.product-details-section {
+  flex: 1;
+  text-transform: uppercase;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.timer {
+  background: #fffbe6;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+}
+
+.size-options {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  background: #f0f0f0;
+  border: 1px solid #ddd;
+}
+
+.add-to-bag-btn {
+  width: 100%;
+  margin-top: 20px;
+  text-transform: uppercase;
+  padding: 20px;
+  max-width: fit-content;
+}
+
+.circle {
+  margin: 0 5px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 16px;
+  border: 1px solid #d9d9d9;
+  transition: all 0.3s;
+}
+
+.circle:hover {
+  background-color: #f5f5f5;
+}
+
+.circle.selected {
+  background-color: #1890ff;
+  color: white;
+  border: 1px solid #1890ff;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.cart-link {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.cart-icon {
+  font-size: 24px;
+  color: black;
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkout-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 90vh;
+  width: 99vw;
+  z-index: -1;
+}
+
+.btn-container {
+  display: flex;
+  gap: 30px;
+}
