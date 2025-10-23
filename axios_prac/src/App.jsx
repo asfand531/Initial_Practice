@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Demo from "./component/Demo";
 import "./App.css";
-import Category from "./component/Category";
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -19,8 +18,6 @@ const App = () => {
           error={error}
           setError={setError}
         />
-
-        <Category data={data} setData={setData} />
       </div>
     </>
   );
