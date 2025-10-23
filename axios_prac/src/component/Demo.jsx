@@ -43,14 +43,12 @@ function Demo({ data, setData, loading, setLoading, error, setError }) {
       <div>
         <ul className="card-container">
           {data.map((products) => (
-            <>
-              <div className="card">
-                <li>Title: {products.title}</li>
-                <li>Category: {products.category}</li>
-                <li>Ratings: {products.rating}</li>
-                <li>Description: {products.description}</li>
-              </div>
-            </>
+            <div className="card" key={products.id}>
+              <li>Title: {products.title}</li>
+              <li>Category: {products.category}</li>
+              <li>Ratings: {products.rating}</li>
+              <li>Description: {products.description}</li>
+            </div>
           ))}
         </ul>
       </div>

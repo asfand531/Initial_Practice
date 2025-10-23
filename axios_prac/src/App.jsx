@@ -11,14 +11,14 @@ const App = () => {
   return (
     <>
       <div>
-        {/* <Demo
+        <Demo
           data={data}
           setData={setData}
           loading={loading}
           setLoading={setLoading}
           error={error}
           setError={setError}
-        /> */}
+        />
 
         <Category data={data} setData={setData} />
       </div>
