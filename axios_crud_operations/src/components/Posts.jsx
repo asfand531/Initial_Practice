@@ -24,17 +24,13 @@ function Posts() {
       if (res.status === 200) {
         getPostData();
       }
-      //   const newUpdatedPosts = data.filter((item) => {
-      //     return item.id !== id;
-      //   });
-      //   setData(newUpdatedPosts);
-      //   }
+      const newUpdatedPosts = data.filter((item) => {
+        return item.id !== id;
+      });
+      setData(newUpdatedPosts);
     } catch (error) {
       console.log(error);
     }
-      
-      
-      
   };
 
   return (
@@ -51,7 +47,7 @@ function Posts() {
                 <button>edit</button>
                 <button
                   className="btn-delete"
-                  onClick={() => handleDeletePost(id)} // This "id" comes from the "<li key={id}>". Because if I want to delete the item we need to check the unique thing in it to pick and delete the item, so in case, "id" is the unique thing.
+                  onClick={() => handleDeletePost(id)}
                 >
                   delete
                 </button>
