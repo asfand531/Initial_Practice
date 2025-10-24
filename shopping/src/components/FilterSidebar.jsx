@@ -15,6 +15,18 @@ const FilterSidebar = ({
     setFilters({ ...filters, [key]: value });
   };
 
+  const fabric = ["Cotton", "Blended", "Semi-Blended"];
+
+  const color = ["Black", "White", "Brown", "Blue", "Cream", "Off-White"];
+
+  const category = [
+    "Formal",
+    "Semi-Formal",
+    "Casual",
+    "Peshawari Chappal",
+    "Footwear",
+  ];
+
   return (
     <Sider width={300} className="filter-sidebar">
       <div className="filter-container">
@@ -46,31 +58,39 @@ const FilterSidebar = ({
             <Radio.Group
               onChange={(e) => handleFilterChange("fabric", e.target.value)}
             >
-              <Radio value="Cotton">Cotton</Radio>
-              <Radio value="Blended">Blended</Radio>
+              {fabric.map((f, i) => {
+                return (
+                  <Radio key={i} value={f}>
+                    {f}
+                  </Radio>
+                );
+              })}
             </Radio.Group>
           </Panel>
           <Panel header="Color Family" key="2">
             <Radio.Group
               onChange={(e) => handleFilterChange("color", e.target.value)}
             >
-              <Radio value="Black">Black</Radio>
-              <Radio value="White">White</Radio>
-              <Radio value="Brown">Brown</Radio>
-              <Radio value="Blue">Blue</Radio>
-              <Radio value="Cream">Cream</Radio>
-              <Radio value="Off-White">Off-White</Radio>
+              {color.map((c, i) => {
+                return (
+                  <Radio key={i} value={c}>
+                    {c}
+                  </Radio>
+                );
+              })}
             </Radio.Group>
           </Panel>
           <Panel header="Category" key="3">
             <Radio.Group
               onChange={(e) => handleFilterChange("category", e.target.value)}
             >
-              <Radio value="Formal">Formal</Radio>
-              <Radio value="Semi-Formal">Semi-Formal</Radio>
-              <Radio value="Casual">Casual</Radio>
-              <Radio value="Peshawari Chappal">Peshawari Chappal</Radio>
-              <Radio value="Footwear">Footwear</Radio>
+              {category.map((c, i) => {
+                return (
+                  <Radio key={i} value={c}>
+                    {c}
+                  </Radio>
+                );
+              })}
             </Radio.Group>
           </Panel>
         </Collapse>
