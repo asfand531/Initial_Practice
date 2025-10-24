@@ -20,8 +20,6 @@ import ChildA from "./components/ChildA";
 export const ThemeContext = createContext();
 
 function App() {
-  // const [user, setUser] = useState({ name: "Verna" });
-
   const [theme, setTheme] = useState("white");
   const [textColor, setTextColor] = useState("black");
   const [border, setBorder] = useState("black");
@@ -32,11 +30,8 @@ function App() {
     setTheme(newTheme);
     setTextColor(newColor);
     setBorder(newBorder);
-    // document.body.style.backgroundColor = newTheme;
-    // document.body.style.color = newColor;
   };
   document.body.style.backgroundColor = "gray";
-
 
   return (
     <>
@@ -47,23 +42,15 @@ function App() {
             color: textColor,
             margin: 0,
             padding: 30,
-            // height: 400,
-            // width: 400,
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            // border: `10px solid ${border}`,
+            border: `10px solid ${border}`,
           }}
         >
           <ChildA />
         </div>
       </ThemeContext.Provider>
-
-      {/* <div>
-        <UserContext.Provider value={user}>
-          <ChildA />
-        </UserContext.Provider>
-      </div> */}
     </>
   );
 }
