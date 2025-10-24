@@ -45,14 +45,12 @@
 import { Link } from "react-router-dom";
 import { ShoppingCartOutlined, MenuOutlined } from "@ant-design/icons";
 import { useState } from "react";
-import { Menu, Card } from "antd";
+import { Menu } from "antd";
 import data from "../clothes/ClothesData";
 import "./Navbar.css";
 
 const Navbar = ({ setSelectedBrand, cartNumber, search, setSearch }) => {
-  // if (setSelectedBrand(null)) {
-  //   setSearch("");
-  // }
+  const [searchResults, setSearchResults] = useState([]);
 
   const items = [
     {
@@ -155,29 +153,25 @@ const Navbar = ({ setSelectedBrand, cartNumber, search, setSearch }) => {
   ];
 
   const handleChange = (e) => {
-    const cd = [...data];
     const value = e.target.value;
+    const capitalize = value.charAt(0).toUpperCase() + value.slice(1);
+    setSearch(capitalize);
 
-    // Capitalize the first letter, keep the rest as is
-    const capitalized = value.charAt(0).toUpperCase() + value.slice(1);
-    // const capitalized = value.replace(/^./, (char) => char.toUpperCase());
-    // setSearch(capitalized);
-    // const searchInput = String(data.name).match(search);
-    // setSearch(searchInput);
-    console.debug("Data >>>> ", data, value);
-    // const searchData = data.filter((item) => item.name.includes(value));
-    const searchData = data.filter((item) => !value.startsWith(item.name));
+    console.debug("User input:", value);
 
-    console.debug("searchData >>>>> ", searchData);
+    const searchData = data.filter((item) =>
+      item.name.toLowerCase().includes(value.toLowerCase())
+    );
+
+    console.debug("Filtered results:", searchData);
+
     if (searchData.length > 0) {
-      console.log("Data found! \n" + searchData);
+      console.log("Data found:", searchData);
     } else {
-      console.log("There is no data which you are looking for.");
+      console.log("No matching data found.");
     }
-    console.log("Your search: ", searchData);
-    if (searchData.length > 0) {
-      setSearch(searchData);
-    }
+
+    setSearchResults(searchData);
   };
 
   return (

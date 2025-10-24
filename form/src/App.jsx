@@ -16,7 +16,7 @@ function App() {
   const [cartCount, setCartCount] = useState(0);
   const [cartItems, setCartItems] = useState([]);
   // const [cartItems, setCartItems] = useState({});
-  let [search, setSearch] = useState(); // Used for search input
+  let [search, setSearch] = useState("");
 
   return (
     <>
