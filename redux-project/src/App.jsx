@@ -5,7 +5,6 @@ import "./App.css";
 function App() {
   const counter = useSelector((state) => state.counterReducer.count);
   const info = useSelector((state) => state.app.name);
-  // const clear = useSelector((state) => state.clearFieldReducer.empId);
   const dispatch = useDispatch();
 
   const handleClick = (type) => {
@@ -32,9 +31,9 @@ function App() {
     }, 2000);
   };
 
-  const handleScroll = () => {
-    console.log("I'm scrolling!");
-  };
+  window.addEventListener("scroll", () => {
+    console.log("Scrolled!");
+  });
 
   const list = [1, 2, 3, 4, 5];
   let uuid = crypto.randomUUID();
@@ -61,8 +60,8 @@ function App() {
           <button onClick={handlePopUps}>PopUp</button>
         </ul>
       </div>
-      {/* <div>
-        <p onScroll={handleScroll}>
+      <div>
+        <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore porro
           explicabo accusantium harum sunt praesentium minima deleniti officiis
           deserunt, eum veritatis accusamus nam dolorum doloremque cumque
@@ -3476,16 +3475,7 @@ function App() {
           Voluptates iusto unde esse modi voluptate blanditiis atque, ratione
           dolor, repellat autem quis necessitatibus, odit quasi!
         </p>
-      </div> */}
-      {/* <div> */}
-      {/* <input
-          type="text"
-          onChange={(e) => setInput(e.target.value)}
-          value={input.empId}
-        /> */}
-      {/* <button onClick={handleField}>Reset</button>
-        {input.empId}
-      </div> */}
+      </div>
     </>
   );
 }
