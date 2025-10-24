@@ -64,8 +64,6 @@ const Checkout = ({ cartItems }) => {
   };
 
   const validEmail = "[a-zA-Z0-7._]+@gmail.com";
-  const validPhoneNo = "(., '^d{10}$')";
-  // console.log(validEmail.match());
 
   return (
     <>
@@ -85,7 +83,7 @@ const Checkout = ({ cartItems }) => {
               { required: true, message: "Please enter your email!" },
               { type: "email", message: "Please enter a valid email!" },
               {
-                pattern: validEmail, // Using regex
+                pattern: validEmail,
                 message: "Your email must have domain @gmail.com",
               },
               // {

@@ -41,13 +41,13 @@ const Home = () => (
     <header className="card-container">
       {imgSrc.map((item) => (
         // <Link to={item.link} key={item.id} className="link">
-          <Card
-            hoverable
-            className="card"
-            cover={<img alt="men-ks" src={item.src} />}
-          >
-            <Meta title={item.title} />
-          </Card>
+        <Card
+          hoverable
+          className="card"
+          cover={<img alt="men-ks" src={item.src} />}
+        >
+          <Meta title={item.title} />
+        </Card>
         // </Link>
       ))}
     </header>

@@ -110,7 +110,6 @@ function Footwear() {
     },
   ]);
 
-  const [collection, setCollection] = useState("");
   const [filters, setFilters] = useState({});
   const [filteredData, setFilteredData] = useState(cardData);
 

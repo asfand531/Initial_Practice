@@ -8,7 +8,6 @@ const { Panel } = Collapse;
 const FilterSidebar = ({
   filters,
   setFilters,
-  applyFilters,
   clearFilter,
   clearAllFilters,
 }) => {
