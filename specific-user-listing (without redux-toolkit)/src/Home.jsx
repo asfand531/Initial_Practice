@@ -1,5 +1,6 @@
 import UserList from "./UserList";
 import AddUser from "./AddUser";
+import "./App.css";
 
 function Home({
   users = [],
@@ -8,7 +9,7 @@ function Home({
   setOpenAddUserModal,
 }) {
   return (
-    <div className="home-layout">
+    <>
       <div className="home-container">
         <div className="home-text-container">
           <h1>Welcome to the website!</h1>
@@ -24,11 +25,7 @@ function Home({
         openResponsive={openAddUserModal}
         setOpenResponsive={setOpenAddUserModal}
       />
-
-      {/* <div className="userlist-container" id="user-list-section">
-        <UserList data={users} />
-      </div> */}
-    </div>
+    </>
   );
 }
 
